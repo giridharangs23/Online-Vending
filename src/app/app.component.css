@@ -1,0 +1,16 @@
+div.top {
+    height: 100px;
+ 
+    background-color: #4286f4;
+}
+
+div.centre {
+      height: 820px;
+    background-color: lightgrey;
+}
+
+div.image {
+      height: 820px;
+   background-image:url('../assets/img/bg.jpg');
+   
+}

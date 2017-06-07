@@ -1,0 +1,10 @@
+div.groove {
+    border-style: groove;
+    display: -webkit-inline-box;
+}
+
+div.pay {
+  
+    width: 1520px;
+    background-color: powderblue;
+}

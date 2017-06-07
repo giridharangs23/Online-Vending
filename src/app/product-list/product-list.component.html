@@ -1,0 +1,46 @@
+<br>
+
+<div class="pay">
+
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    
+      <a routerLink="/buy-Product" routerLinkActive="active"><input [disabled]="buyButtonDisable" type="button" value="Buy" style="float: right;"></a>
+    </div>
+  
+  <div class="row">
+    <div *ngFor="let items of productList">
+      <div class="col-md-4 ">
+        <div style="    border: 1px solid; margin: 10px">
+
+          <div class="row">
+            <div class="col-md-9">
+              <img src={{items.img}} class="img-rounded" />
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <h2>{{items.name}}</h2>
+              </div>
+              <div class="row">
+                <p>Price:${{items.price}}</p>
+              </div>
+              <div class="row">
+                <p>Stock Available:{{items.quantity}}</p>
+              </div>
+
+              <a (click)="decreaseQuantity(items.name)"><i class="fa fa-minus" aria-hidden="true"></i></a> <a> <i (click)="increaseQuantity(items.name)" class="fa fa-plus" aria-hidden="true"></i></a>
+              <input type="number" name="usrname" [formControl]="quantitySelectionFormGroup.controls[items.name]" style="width:35px;" />
+              <button [disabled]="quantitySelectionFormGroup.controls[items.name].value<1" type="button" (click)="alert()">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

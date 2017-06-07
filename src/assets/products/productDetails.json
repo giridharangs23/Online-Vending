@@ -1,0 +1,27 @@
+
+[
+  {
+    "name": "lays",
+    "img": "../../assets/img/lays.jpg",
+    "quantity": 24,
+    "price": 35
+  },
+  {
+    "name": "sprite",
+    "img": "../../assets/img/sprite.jpg",
+    "quantity": 17,
+    "price": 28
+  },
+  {
+    "name": "coke",
+    "img": "../../assets/img/coke.jpg",
+    "quantity": 0,
+    "price": 40
+  },
+  {
+    "name": "pepsi",
+    "img": "../../assets/img/pepsi.jpg",
+    "quantity": "",
+    "price": 44
+  }
+]
