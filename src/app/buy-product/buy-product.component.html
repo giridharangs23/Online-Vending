@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-8 ">
       <div class="top">
-        <h4 align="center">Your Cart Details</h4>
+        <h4 class="cartdetails" >Your Cart Details</h4>
       </div>
       <div class="row">
         <div class="col-md-4">
@@ -19,24 +19,20 @@
           <h4>Quantity</h4>
         </div>
         <div class="col-md-4">
-          <h4>Price</h4>
+          <h4 style="    text-align: center;">Price</h4>
         </div>
       </div>
       <div class="row">
         <div *ngFor="let items of finalProductDetails">
           <div *ngIf="items[1] !== null">
             <div class="col-md-4">
-              <ul>
-                <li>{{items[0]}}</li>
-              </ul>
+                <span>{{items[0]}}</span>
             </div>
             <div class="col-md-4">
               {{items[1]}}
             </div>
-            <div class="col-md-4">
-              <ul>
-                <li>Rs&nbsp;{{ items[2]}}</li>
-              </ul>
+            <div class="col-md-4" style="text-align: center;">
+                <span >Rs&nbsp;{{ items[2]}}</span>
             </div>
           </div>
         </div>
@@ -46,14 +42,14 @@
           <h4></h4>
         </div>
         <div class="col-md-4">
-          <h4 align="right">Total Amount</h4>
+         
         </div>
         <div class="col-md-4">
-          Rs&nbsp;{{totalAmount}}
+           <h4 align="right">Total Amount Rs&nbsp;{{totalAmount}}</h4>
         </div>
       </div>
-      <button type="button" (click)="payBycash()" style="float: right;">Pay By Cash</button>
-      <button type="button" (click)="payByCard()" style="float: right;">Pay by Card</button>
+      <button type="button" (click)="payBycash()" style="float: right;     margin: 5px;">Pay By Cash</button>
+      <button type="button" (click)="payByCard()" style="float: right;     margin: 5px;">Pay by Card</button>
     </div>
     <div class="col-md-2 ">
     </div>
@@ -64,7 +60,7 @@
     </div>
     <div class="col-md-8 ">
       <div class="top">
-        <h4 align="center">Pay By Cash</h4>
+        <h4 class="paymenttitle" >Pay By Cash</h4>
 
       </div>
       <br> Cash Denomination Details: Rs
@@ -96,7 +92,7 @@
     </div>
     <div class="col-md-8 ">
       <div class="top">
-        <h4 align="center">Pay By Card</h4>
+        <h4 class="paymenttitle" >Pay By Card</h4>
       </div>
      <iframe src="https://www.facebook.com" width="750" height="400"></iframe>
      Sample Payment Gateway Sandbox test URL is not Available.(If we have we can test with Merchant ID & Amount)

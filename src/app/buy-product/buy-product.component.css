@@ -7,3 +7,11 @@ div.top {
 li.getData{
     height: 0px;
 }
+.cartdetails{
+        text-align: center;
+    padding-top: 15px;
+}
+.paymenttitle{
+    text-align: center;
+    padding-top: 15px;
+}

@@ -14,11 +14,11 @@
   <div class="row">
     <div *ngFor="let items of productList">
       <div class="col-md-4 ">
-        <div style="    border: 1px solid; margin: 10px">
+        <div >
 
           <div class="row">
             <div class="col-md-9">
-              <img src={{items.img}} class="img-rounded" />
+              <img src={{items.img}} class="img-rounded"  style="float: right;"/>
             </div>
             <div class="col-md-3">
               <div class="row">
@@ -30,10 +30,14 @@
               <div class="row">
                 <p>Stock Available:{{items.quantity}}</p>
               </div>
-
-              <a (click)="decreaseQuantity(items.name)"><i class="fa fa-minus" aria-hidden="true"></i></a> <a> <i (click)="increaseQuantity(items.name)" class="fa fa-plus" aria-hidden="true"></i></a>
-              <input type="number" name="usrname" [formControl]="quantitySelectionFormGroup.controls[items.name]" style="width:35px;" />
-              <button [disabled]="quantitySelectionFormGroup.controls[items.name].value<1" type="button" (click)="alert()">Add to Cart</button>
+              <div class="row">
+              <input type="number" name="usrname" [formControl]="quantitySelectionFormGroup.controls[items.name]" style="width:35px;" />  
+              <i (click)="decreaseQuantity(items.name)" class="fa fa-minus plus-minus" aria-hidden="true"></i>
+              <i (click)="increaseQuantity(items.name)" class="fa fa-plus plus-minus" aria-hidden="true"></i>
+              </div>
+              <div class="row">
+              <button class="addtocart" [disabled]="quantitySelectionFormGroup.controls[items.name].value<1" type="button" (click)="alert()">Add to Cart</button>
+              </div>
             </div>
           </div>
         </div>

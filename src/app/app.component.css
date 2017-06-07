@@ -14,3 +14,7 @@ div.image {
    background-image:url('../assets/img/bg.jpg');
    
 }
+.heading{
+        padding-top: 33px;
+    text-align: center;
+}

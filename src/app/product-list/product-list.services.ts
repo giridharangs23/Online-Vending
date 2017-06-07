@@ -9,7 +9,7 @@ export class ProductService {
   subjecj = new Subject;
   constructor (public http: Http) {}
   getProductList() {
-    return this.http.get('https://api.myjson.com/bins/1ge1bx');
+    return this.http.get('https://api.myjson.com/bins/11co4t');
                    
   }
  
